@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "../components/Carousel";
 import ShopBy from "../components/ShopBy";
 import GenInfo, { Brands } from "../components/GenInfo";
+import productsData from "../data/products";
 
 const Home = () => {
   return (
@@ -11,10 +12,11 @@ const Home = () => {
       <Brands />
       <div className="md:w-full md:max-w-full xs:mx-2  sm:mx-auto ">
         <div className="prose prose-2xl">
-          <ShopBy title="Best Sellers" filter="bestSellers" />
+          <ShopBy title="Best Sellers" filter="bestSellers" data={productsData} />
         </div>
         <div className="child:ring-white">
-          <ShopBy title="Top Rated" filter="topRated" />
+          <ShopBy title="Top Rated" filter="topRated"  data={[]}
+          />
         </div>
       </div>
     </div>
